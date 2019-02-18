@@ -1,0 +1,18 @@
+{% extends ["base.html.twig", 'footer.html.twig'] %}
+
+{% block body %}
+    {% block name %} Twig- block e extends {% endblock %}
+    </br>
+    {{ block('name')}}
+
+    </br>
+
+
+    </br>
+
+    {% if block('footer', 'footer.html.twig') is defined %}
+
+        {{ block('footer', 'footer.html.twig')}}
+
+    {% endif %}
+{% endblock %}

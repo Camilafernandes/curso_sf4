@@ -1,0 +1,66 @@
+<html>
+
+    <h1>{{ "Olá" }}<h1>
+    {{ message }}
+    <hr>
+    {# Estrutura de repetição #}
+    {# foreach (array as $ arr) #}
+
+    {% for arr in array %}
+ 
+            {{ arr }}
+
+    {% endfor %}
+    <hr>
+    {# criando variaveis #}
+
+    {% set nome = "Camila" %}
+    {{ nome }}
+
+    <hr>
+    {# operadores mátemáticos #}
+    {% set valor = 1 + 1 %}
+    {{ valor }}
+    
+    <hr>
+    {# arrays #}
+    {% set array = ['1','2', '3'] %}
+    {{ array[0] }}
+
+    <hr>
+    {% for i  in 0..50 %}
+    {{ i }}
+    {% endfor %}
+
+    <hr>
+    {# constant #}
+    {{ constant('App\\Controller\\DefaultController::NOME' ) }}
+    
+    <hr>
+    {# dump #}
+    {{ dump(array) }}
+
+    <hr>
+
+    {# dump #}
+    {% for i  in range(0, 10, 2) %}
+    {{ i }}
+    {% endfor %}
+
+    {# cicle #}
+    {% set array = ['foo', '1', 'bar'] %}
+    {% for i  in 0..10 %}
+        {{ cycle(array, i) }}
+    {% endfor %}
+    
+    <hr>
+    {# split - explode #}
+    {% set var = "1,2,3"|split(',') %}
+
+    {% for numbers in var %}
+
+        {{ numbers}}
+    {% endfor %}
+    
+
+</html>

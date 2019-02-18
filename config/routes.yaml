@@ -1,0 +1,15 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+index:
+    path: /hello
+    controller: App\Controller\DefaultController::index
+
+aula1_twig:
+    path: /twig
+    controller: App\Controller\DefaultController::aula1
+
+aula1_block:
+    path: /block_extends
+    controller: App\Controller\DefaultController::blockExtends
