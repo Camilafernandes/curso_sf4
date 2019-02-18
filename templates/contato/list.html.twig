@@ -28,7 +28,13 @@
                             <td>{{ contato.nome }} </td>
                             <td>{{ contato.email }} </td>
                             <td>{{ contato.mensagem }} </td>
+                            <td>
+                                <a class="btn btn-sm btn-warning" 
+                                href="{{ path('visualizar_contato', {"id": contato.id}) }}">
+                                <i class="fa fa-eye"></i></a>
+                            </td>
                         </tr>
+                        
                     {% endfor %}
                 </tbody>
             </table>

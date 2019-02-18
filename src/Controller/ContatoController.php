@@ -46,4 +46,19 @@ class ContatoController extends AbstractController
             'contatos' => $contatos
         ]);
     }
+
+    /**
+     * @Route("contato/view/{id}", name="visualizar_contato")
+     */
+    public function view(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $contato = $em->getRepository(Contato::class)->find($id);
+
+        return $this->render('contato/view.html.twig', [
+            'contato' => $contato
+        ]);
+
+    }
 }

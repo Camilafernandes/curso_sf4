@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contato{% endblock %}
+
+{% block body %}
+
+<h1>Visualizando contato</h1>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Nome</th>
+                <td>{{ contato.nome }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ contato.email }}</td>
+            </tr>
+            <tr>
+                <th>Mensagem</th>
+                <td>{{ contato.mensagem }}</td>
+            </tr>
+            {% if contato.endereco %}
+                <tr>
+                    <th>Logradouro</th>
+                    <td>{{ contato.endereco.logradouro }}</td>
+                </tr>
+                <tr>
+                    <th>CEP</th>
+                    <td>{{ contato.endereco.cep }}</td>
+                </tr>
+                <tr>
+                    <th>Cidade</th>
+                    <td>{{ contato.endereco.cidade }}</td>
+                </tr>
+                <tr>
+                    <th>Estado</th>
+                    <td>{{ contato.endereco.estado }}</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
