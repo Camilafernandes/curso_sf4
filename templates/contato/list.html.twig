@@ -32,6 +32,13 @@
                                 <a class="btn btn-sm btn-warning" 
                                 href="{{ path('visualizar_contato', {"id": contato.id}) }}">
                                 <i class="fa fa-eye"></i></a>
+                                <a class="btn btn-sm btn-success" 
+                                href="{{ path('editar_contato', {"id":  contato.id } ) }}">
+                                <i class="fa fa-pencil"></i>
+                                </a>
+                                <a class="btn btn-sm btn-danger bt_excluir_contato" 
+                                href="{{ path('apagar_contato', {"id": contato.id}) }}">
+                                <i class="fa fa-trash"></i> </a>
                             </td>
                         </tr>
                         

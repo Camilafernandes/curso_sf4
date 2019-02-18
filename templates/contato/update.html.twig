@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{%  block title%} Listando Con'bootstrap_4_horizontal_layout.html.twig'tato {% endblock %}
+
+{%  block body%}
+    <div class="form-group mt-5">
+       
+        {% form_theme form  with 'bootstrap_4_horizontal_layout.html.twig'%}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form)}}
+
+    </div>
+
+{% endblock %}
