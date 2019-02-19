@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 class DefaultController extends Controller
 {
@@ -26,5 +27,19 @@ class DefaultController extends Controller
     public function blockExtends()
     {
          return $this->render( 'aula1_block_extends.html.twig');
+    }
+    
+    public function pegarSession(SessionInterface $session){
+
+        //$session->remove('frase');
+        $mensagem = $session->get('frase', 'Não possui sessao');
+
+        //$this->get('session')->getFlashBag()->set('error', 'Sou um erro!!');
+        //echo $mensagem;
+        //die();
+       return $this->render( 'session/index.html.twig', [
+            'controller_name' => 'Deafult'
+        ]);
+
     }
 }

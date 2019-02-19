@@ -13,3 +13,7 @@ aula1_twig:
 aula1_block:
     path: /block_extends
     controller: App\Controller\DefaultController::blockExtends
+
+pegar_sessao:
+    path: /pegar_sessao
+    controller: App\Controller\DefaultController::pegarSession

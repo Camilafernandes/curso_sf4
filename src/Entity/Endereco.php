@@ -36,6 +36,11 @@ class Endereco
      */
     private $estado;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $numero;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Endereco
     public function setEstado(string $estado): self
     {
         $this->estado = $estado;
+
+        return $this;
+    }
+
+    public function getNumero(): ?string
+    {
+        return $this->numero;
+    }
+
+    public function setNumero(string $numero): self
+    {
+        $this->numero = $numero;
 
         return $this;
     }
