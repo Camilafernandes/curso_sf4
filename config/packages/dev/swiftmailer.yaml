@@ -2,13 +2,13 @@
 swiftmailer:
     # send all emails to a specific address
     #delivery_addresses: ['me@example.com']
-    transport: smtp
-    username: camilasilvafernandes15@gmail.com
-    password: ghginvnnjqdyftrn
-    host: smtp.gmail.com
-    encryption: ssl
-    port: 465
-    stream_options:
-        ssl:
-            allow_self_signed: true
-            verify_peer: false
+    #transport: smtp
+    #username: meuemail@gmail.com
+    #password: minhasenha
+    #host: smtp.gmail.com
+    #encryption: ssl
+    #port: 465
+    #stream_options:
+    #    ssl:
+    #        allow_self_signed: true
+    #        verify_peer: false
