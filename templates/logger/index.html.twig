@@ -1,11 +1,13 @@
-
 {% block title %}Hello LoggerController!{% endblock %}
 {% block stylesheet %}
-    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+    {#<link rel="stylesheet" href="{{ asset('build/css/app.css') }}">#}
+    {{ encore_entry_link_tags('css/app') }}
 {% endblock %}
 
 {% block javascripts %}
-    <script type="text/javascript" src="{{ asset('build/js/app.js')}}"></script>
+
+    {#<script type="text/javascript" src="{{ asset('build/js/app.js')}}"></script> #}s
+    {{ encore_entry_script_tags('js/app') }}
 {% endblock %}
 
 {% block body %}
