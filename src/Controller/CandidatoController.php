@@ -21,7 +21,9 @@ class CandidatoController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            
             $files = $request->files->get('candidato')['foto'];
+
             $newName = md5($files->getClientOriginalName()) . uniqid() . time() . '.' . $files->guessExtension();
             $files->move(
                 $this->getParameter('foto'), 
