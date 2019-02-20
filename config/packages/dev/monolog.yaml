@@ -6,23 +6,23 @@ monolog:
             level: debug
             channels: ["!event"]
 
-        mail:
-            type: fingers_crossed
-            action_level: error
-            handler: duplicado
+        #mail:
+        #    type: fingers_crossed
+        #    action_level: error
+        #    handler: duplicado
         
-        duplicado:
-            type: deduplication
-            handler: swift
+        #duplicado:
+        #    type: deduplication
+        #    handler: swift
         
-        swift:
-            type: swift_mailer
-            from_email: 'erro@email.com'
-            to_email: 'camilafernandesdev@gmail.com'
-            subject: 'Ocorreu um erro no SF4'
-            level: debug
-            formatter: monolog.formatter.html
-            content_type: text/html
+        #swift:
+        #    type: swift_mailer
+        #    from_email: 'erro@email.com'
+        #    to_email: 'camilafernandesdev@gmail.com'
+        #    subject: 'Ocorreu um erro no SF4'
+        #    level: debug
+        #    formatter: monolog.formatter.html
+        #    content_type: text/html
             
         console:
             type: console
