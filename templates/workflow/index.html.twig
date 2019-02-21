@@ -1,0 +1,30 @@
+{% extends 'workflow/layout.html.twig' %}
+
+{% block main %}
+    <h1>Listando Posts</h1>
+    <ul class="list-unstyled">
+        {% for post in posts %}
+            <li>
+                <a href="{{ path('post_show', {id: post.id}) }}">
+                    {{ post.titulo }}
+                </a>
+            </li>
+        {% else %}
+            <li>
+                <p>
+                    Não existe post criado.
+                </p>
+
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Adicionar post</h2>
+    <form action="{{ path('post_create') }}" method="post"  class="form-inline">
+        <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" name="titulo" value="{{ posts ? "Post #{(posts|length) + 1}" : "My first post" }}" class="form-control" />
+        </div>
+        <button type="submit"  class="btn btn-default">create</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,31 @@
+framework:
+    workflows: 
+        post:
+            type: workflow
+            audit_trail: true
+            supports:
+                - App\Entity\Post
+            places:
+                draft:
+                    metadata:
+                        title: Draft
+                review:
+                    metadata:
+                        title: Review
+                published: ~
+            
+            transitions:
+                request_review:
+                    from: draft
+                    to:
+                        - review
+                    metadata:
+                        title: fazer revisão?
+                
+                publish:
+                    from:
+                        - review
+                    to: published
+                    metadata:
+                        title: Publicar?
+
