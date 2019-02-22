@@ -1,0 +1,8 @@
+services:
+  produto.search_filter:
+    parent: 'api_platform.doctrine.orm.search_filter'
+    arguments: [ { id: 'exact', nome: 'partial', descricao: 'partial'}  ]
+    tags: ['api_platform.filter']
+    autowire: true
+    autoconfigure: false
+    public: true
